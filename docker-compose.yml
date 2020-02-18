@@ -1,0 +1,13 @@
+version: "3.0"
+
+services:
+  gitlab_ci_runner:
+    build: #buildしたときのimage名はimageに指定した名前になる
+      context: ./
+      dockerfile: Dockerfile
+    hostname: gitlab_ci_runner
+    image: hazuki3417/gitlab_ci_runner:latest
+    container_name: gitlab_ci_runner
+    environment:
+      TZ: Asia/Tokyo
+    tty: true
