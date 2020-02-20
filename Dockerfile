@@ -52,6 +52,9 @@ RUN : "phpをインストール" & \
 	php7.2-zip \
 	php-xdebug
 
+RUN : "Gitをインストール" & \
+	apt-get install -y git
+
 # ミドルウェアのインストール
 # RUN apt-get update && apt-get install -y \
 # 	software-properties-common \
